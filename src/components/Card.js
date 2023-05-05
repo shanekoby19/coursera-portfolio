@@ -9,7 +9,7 @@ const Card = ({ title, description, imageSrc }) => {
   // Feel free to import other UI components from Chakra UI if you wish to.
   
   return (
-    <VStack color="black" alignItems={"left"} bg="white" borderTopRadius={"10px"} paddingBottom={"10px"}>
+    <VStack color="black" alignItems={"left"} bg="white" borderRadius={"10px"} paddingBottom={"10px"}>
       <Image borderRadius={"10px"} src={imageSrc}></Image>
       <Heading as="h2" paddingLeft="10px" size='md'>{title}</Heading>
       <Text paddingLeft="10px">{description}</Text>

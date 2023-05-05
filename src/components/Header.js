@@ -4,6 +4,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
+  faMedium,
+  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
@@ -11,18 +13,28 @@ const socials = [
   {
     icon: faEnvelope,
     key: 'email',
-    url: "mailto: skobylecky1@gmail.com ",
+    url: "mailto: example@example.com",
   },
   {
     icon: faGithub,
     key: 'github',
-    url: "https://github.com/shanekoby19",
+    url: "https://github.com",
   },
   {
     icon: faLinkedin,
     key: 'linkedIn',
-    url: "https://www.linkedin.com/in/shane-kobylecky/",
-  }
+    url: "https://www.linkedin.com",
+  },
+  {
+    icon: faMedium,
+    key: 'medium',
+    url: "https://medium.com",
+  },
+  {
+    icon: faStackOverflow,
+    key: 'stack-overflow',
+    url: "https://stackoverflow.com",
+  },
 ];
 
 const Header = () => {
@@ -54,7 +66,7 @@ const Header = () => {
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
-          py={4}
+          py={0}
           justifyContent="space-between"
           alignItems="center"
         >
@@ -63,7 +75,7 @@ const Header = () => {
               <HStack
                 px={16}
                 py={4}
-                spacing={4}
+                spacing={8}
               >
                 {socials.map(social => (
                   <a style={{ textDecoration: "none", listStyle: "none" }} href={social.url} target="_blank" key={social.key}>

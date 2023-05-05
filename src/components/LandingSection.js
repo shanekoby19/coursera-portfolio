@@ -3,7 +3,7 @@ import { Avatar, Heading } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 const greeting = "Hello, I'm Pete!";
-const bio1 = "A frontend developer,";
+const bio1 = "A frontend developer";
 const bio2 = "specialised in ";
 const bioSpan = "react".toUpperCase();;
 
@@ -16,10 +16,10 @@ const LandingSection = () => (
     isDarkBackground
     backgroundColor="#2A4365"
   >
-    <Avatar src="https://i.pravatar.cc/150?img=7" size='2xl'/>
-    <Heading size='2xl'>{greeting}</Heading>
-    <Heading size='md'>{bio1}</Heading>
-    <Heading size='md'>{bio2}<span style={{ fontWeight: 700, color: "#18181b"}}>{bioSpan}</span></Heading>
+    <Avatar marginBottom={"30px"} src="https://i.pravatar.cc/150?img=7" size='2xl'/>
+    <Heading style={{margin: "0px 0px 20px 0px"}} as="h1" size='2xl'>{greeting}</Heading>
+    <Heading style={{margin: "0px 0px 5px 0px"}} as="h2" size='4xl'>{bio1}</Heading>
+    <Heading as="h2" size='4xl'>{bio2}<span style={{ fontWeight: 700, color: "#18181b"}}>{bioSpan}</span></Heading>
   </FullScreenSection>
 );
 
