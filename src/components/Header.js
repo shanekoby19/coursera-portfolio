@@ -4,8 +4,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faMedium,
-  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
@@ -30,8 +28,6 @@ const socials = [
 const Header = () => {
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
-    console.log(id);
-    console.log(element);
 
     const element = document.getElementById(id);
 
@@ -81,8 +77,8 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a onClick={() => handleClick('contactme')} href="/#contactme">Contact Me</a>
-              <a onClick={() => handleClick('projects')} href="/#projects">Projects</a>
+              <a onClick={() => handleClick('projects')} href="/#projects-section">Projects</a>
+              <a onClick={() => handleClick('contactme')} href="/#contactme-section">Contact Me</a>
             </HStack>
           </nav>
         </HStack>
