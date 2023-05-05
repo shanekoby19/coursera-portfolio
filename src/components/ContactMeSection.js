@@ -22,10 +22,13 @@ const LandingSection = () => {
   const { onOpen } = useAlertContext();
 
   useEffect(() => {
-    if(response.type === 'success') {
-      formik.resetForm();
+    if(response) {
+      if(response.type === 'success') {
+        formik.resetForm();
+      }
+      onOpen(response.type, response.message);
     }
-    onOpen(response.type, response.message);
+    
   }, [response])
 
   const formik = useFormik({
